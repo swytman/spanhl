@@ -1,2 +1,2 @@
 # react-router-course-ru
-Код для раздела [Создаем примитивный роутер](https://maxfarseer.gitbooks.io/react-router-course-ru/content/sozdaem_primitivnii_router.html)
+Код для раздела [Подключаем react-router](https://maxfarseer.gitbooks.io/react-router-course-ru/content/podklyuchaem_react-router.html)
