@@ -7,10 +7,10 @@ import Genre from './components/Genre'
 import Home from './components/Home'
 import NotFound from './components/NotFound'
 
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 render(
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
       <Route path='admin' component={Admin} />
