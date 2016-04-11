@@ -14,13 +14,13 @@ export default class List extends Component {
           <div className='col-md-12'>
             <ul className='list'>
               <li className='list__item'>
-                <Link to='/house/'>House</Link>
+                <Link to='/genre/house/'>House</Link>
               </li>
               <li className='list__item'>
-                <Link to='/dnb/'>Drum and bass</Link>
+                <Link to='/genre/dnb/'>Drum and bass</Link>
               </li>
               <li className='list__item'>
-                <Link to='/hip-hop/'>Hip-hop</Link>
+                <Link to='/genre/hip-hop/'>Hip-hop</Link>
               </li>
             </ul>
           </div>
