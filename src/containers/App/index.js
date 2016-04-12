@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+import NavLink from '../../components/NavLink'
 
 export default class App extends Component {
   render() {
     return (
       <div className='container'>
         <ul className='nav nav-pills'>
-          <li><Link to='/admin'>Админка</Link></li>
-          <li><Link to='/list'>Список жанров</Link></li>
+          <li><NavLink to='/admin' activeClassName='active'>Админка</NavLink></li>
+          <li><NavLink to='/list' activeClassName='active'>Список жанров</NavLink></li>
         </ul>
         {this.props.children}
       </div>
