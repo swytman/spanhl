@@ -6,8 +6,8 @@ export default class App extends Component {
     return (
       <div className='container'>
         <ul className='nav nav-pills'>
-          <li><NavLink to='/admin' activeClassName='active'>Админка</NavLink></li>
-          <li><NavLink to='/list' activeClassName='active'>Список жанров</NavLink></li>
+          <li><NavLink to='/admin'>Админка</NavLink></li>
+          <li><NavLink to='/list'>Список жанров</NavLink></li>
         </ul>
         {this.props.children}
       </div>
