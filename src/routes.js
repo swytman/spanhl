@@ -7,17 +7,26 @@ import List from './components/List'
 import Genre from './components/Genre'
 import Release from './components/Release'
 import Home from './components/Home'
+import Login from './components/Login'
 import NotFound from './components/NotFound'
+
+function checkLogin(nextState, replace) {
+  const login = window.localStorage.getItem('rr_login')
+  if (login !== 'admin') {
+    replace('/')
+  }
+}
 
 export const routes = (
   <div>
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
-      <Route path='/admin' component={Admin} />
+      <Route path='/admin' component={Admin} onEnter={checkLogin}/>
       <Route path='/genre/:genre' component={Genre}>
         <Route path='/genre/:genre/:release' component={Release} />
       </Route>
       <Route path='/list' component={List} />
+      <Route path='/login' component={Login} />
     </Route>
     <Route path='*' component={NotFound} />
   </div>
