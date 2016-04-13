@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
-import { browserHistory } from 'react-router'
+import React, { Component, PropTypes } from 'react'
 
 export default class Home extends Component {
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
   handleSubmit(e) {
     e.preventDefault()
     const value = e.target.elements[0].value.toLowerCase()
-    browserHistory.push(`/genre/${value}`)
+    this.context.router.push(`/genre/${value}`)
   }
   render() {
     return (
@@ -18,4 +21,8 @@ export default class Home extends Component {
       </div>
     )
   }
+}
+
+Home.contextTypes = {
+  router: PropTypes.object.isRequired
 }
