@@ -1,20 +1,16 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as UserActions from '../../actions/UserActions'
 
-export default class Login extends Component {
+export class Login extends Component {
   constructor() {
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleSubmit(e) {
     e.preventDefault()
-    const login = e.target.elements[0].value
-    window.localStorage.setItem('rr_login', login)
-
-    if (login === 'admin') {
-      this.context.router.push('/admin')
-    } else {
-      this.context.router.push('/')
-    }
+    this.props.actions.login({name: e.target.elements[0].value})
   }
   render() {
     return (
@@ -29,6 +25,14 @@ export default class Login extends Component {
   }
 }
 
-Login.contextTypes = {
-  router: PropTypes.object.isRequired
+function mapStateToProps(state) { // eslint-disable-line no-unused-vars
+  return {};
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(UserActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
