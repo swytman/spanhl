@@ -1,4 +1,6 @@
 import {
+  LOGIN_REQUEST,
+  LOGIN_FAIL,
   LOGIN_SUCCESS,
   LOGOUT_SUCCESS
 } from '../constants/User'
@@ -6,17 +8,26 @@ import {
 const initialState = JSON.parse(window.localStorage.getItem('rr_user')) || {}
 
 export default function userstate(state = initialState, action) {
-  let nextState
 
   switch (action.type) {
-  case LOGIN_SUCCESS:
-    nextState = action.payload;
-    return nextState
 
-  case LOGOUT_SUCCESS:
-    return {}
+    case LOGIN_REQUEST:
+      // TODO
+      return {}
 
-  default:
-    return state
-  }
+    case LOGIN_SUCCESS:
+      // TODO
+      return {}
+
+    case LOGIN_FAIL:
+      // TODO
+      return {}
+
+    case LOGOUT_SUCCESS:
+      // TODO
+      return {}
+
+    default:
+      return state
+    }
 }

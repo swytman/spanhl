@@ -1,0 +1,17 @@
+.none {
+  display: none;
+}
+.popup {
+  position: absolute;
+  width: 254px;
+  height: 80px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  z-index: 2;
+  left: 50%;
+  margin: 10px 0 0 -127px;
+  padding: 5px;
+}
+.popup__close {
+  cursor: pointer;
+}

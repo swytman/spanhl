@@ -8,14 +8,13 @@ const initialState = {
 }
 
 export default function popupstate(state = initialState, action) {
-  let nextState;
 
   switch (action.type) {
   case POPUP_SHOW:
-    return { ...nextState, isOpen: true }
+    return { ...state, isOpen: true }
 
   case POPUP_HIDE:
-    return { ...nextState, isOpen: false }
+    return { ...state, isOpen: false }
 
   default:
     return state

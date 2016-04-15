@@ -1,38 +1,24 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import * as UserActions from '../../actions/UserActions'
+import React, { Component, PropTypes } from 'react'
 
-export class Login extends Component {
-  constructor() {
-    super()
-    this.handleSubmit = this.handleSubmit.bind(this)
-  }
+export default class Login extends Component {
   handleSubmit(e) {
     e.preventDefault()
-    this.props.actions.login({name: e.target.elements[0].value})
+    this.props.onLoginClick({name: e.target.elements[0].value})
   }
   render() {
     return (
       <div className='row'>
-        <div className='col-md-12'>Пожалуйста, введите логин:</div>
-        <form className='col-md-4' onSubmit={this.handleSubmit}>
-          <input type='text' placeholder='login'/>
-          <button type='submit'>Войти</button>
-        </form>
+        <div className='col-md-12'>
+          <form className='form-inline' onSubmit={::this.handleSubmit}>
+            <input className='form-control' type='text' placeholder='login'/>{' '}
+            <button className='btn btn-primary' type='submit'>Войти</button>
+          </form>
+        </div>
       </div>
     )
   }
 }
 
-function mapStateToProps(state) { // eslint-disable-line no-unused-vars
-  return {};
+Login.propTypes = {
+  onLoginClick: PropTypes.func.isRequired
 }
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(UserActions, dispatch)
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
