@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 
 export default class Admin extends Component {
-  static onEnter(nextState, replace) {
-    const login = window.localStorage.getItem('rr_login')
-    if (login !== 'admin') {
-      replace('/')
-    }
+  static onEnter() {
+    // nothing
   }
   render() {
     return (
