@@ -1,14 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
-import { redirect } from '../middlewares/redirect'
 import { rootReducer } from '../reducers'
 
 export default function configureStore() {
   const store = compose(
     applyMiddleware(thunkMiddleware),
-    applyMiddleware(createLogger()),
-    applyMiddleware(redirect)
+    applyMiddleware(createLogger())
   )(createStore)(rootReducer)
 
   if (module.hot) {

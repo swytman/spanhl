@@ -1,38 +1,16 @@
+/* eslint-disable no-unused-vars */
+
 import {
   LOGIN_REQUEST,
-  LOGIN_FAIL, //eslint-disable-line no-unused-vars
+  LOGIN_FAIL,
   LOGIN_SUCCESS,
   LOGOUT_SUCCESS
 } from '../constants/User'
 
-import {
-  ROUTING
-} from '../constants/Routing'
-
 export function login(payload) {
-  return (dispatch) => {
-
-    dispatch({
-      type: LOGIN_REQUEST
-    })
-
-    setTimeout(() => {
-      dispatch({
-        type: LOGIN_SUCCESS,
-        payload: {
-          name: payload.name,
-          isAuthenticated: true
-        }
-      })
-
-      dispatch({
-        type: ROUTING,
-        payload: {
-          method: 'replace',
-          nextUrl: '/admin'
-        }
-      })
-    },2000)
+  // TODO
+  return {
+    type: LOGIN_REQUEST
   }
 }
 
@@ -41,3 +19,5 @@ export function logout() {
     type: LOGOUT_SUCCESS
   }
 }
+
+/* eslint-enable no-unused-vars */
