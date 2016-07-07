@@ -11,17 +11,15 @@ export default class TeamList extends Component {
         return (
 
             <div className='row'>
-                <ul>
-                    {this.props.teamlist.teams.map(function(team) {
-                        return <Team
-                            key={team.id}
-                            team={team}
-                            selected = {team.id === selected}
-                            teamClick={teamClick}
+              {this.props.teamlist.teams.map(function(team) {
+                  return <Team
+                      key={team.id}
+                      team={team}
+                      selected = {team.id === selected}
+                      teamClick={teamClick}
 
-                        />;
-                    } ) }
-                </ul>
+                  />;
+              } ) }
             </div>
         )
     }

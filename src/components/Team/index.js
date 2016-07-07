@@ -14,14 +14,16 @@ export default class Team extends Component {
             klass = 'selected'
         }
 
+        klass = `col-sm-7 ${klass}`
+
 
         return (
             <div>
-                <p
+                <div
                     className = {klass}
-                    onClick = {this.props.teamClick.bind(this, team.id)}>{team.id}. {team.title}</p>
+                    onClick = {this.props.teamClick.bind(this, team.id)}>{team.id}. {team.title}
+                </div>
             </div>
         )
     }
 }
-

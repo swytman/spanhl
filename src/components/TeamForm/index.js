@@ -1,27 +1,61 @@
 import React, { Component } from 'react'
-import './styles.scss'
 
 
-export default class Team extends Component {
+export default class TeamForm extends Component {
 
+    constructor(props) {
+      super(props);
+      this.state = {team_title: '' }
+    }
+
+    handleSubmit = (e) => {
+      e.preventDefault();
+    }
+
+    handleUpdateClick = () => {
+        var input = this.refs.team_title;
+        var team = {id: input.getAttribute('data-id'), title: input.value};
+        this.props.updateTeam(team);
+    }
+
+    handleChange = (e) => {
+        this.setState({team_title: e.target.value});
+    }
 
     render() {
-
-        var team = this.props.team;
-
-        let klass;
-        if (this.props.selected) {
-            klass = 'selected'
+        var value = this.props.teamlist.teams.filter((team) => team.id === this.props.teamlist.selected);
+        if (value.length == 1) {value = value[0].title } else {value = ''}
+        if (value){
+          // this.state = {team_title: value }
+        } else {
+          // this.state = {team_title: '' }
         }
-
 
         return (
             <div>
-                <p
-                className = {klass}
-                onClick = {this.props.teamClick.bind(this, team.id)}>{team.id}. {team.title}</p>
+              <form onSubmit={this.handleSubmit} className='form-horizontal' role='form'>
+                <div className='form-group'>
+                  <div className='col-sm-4'>
+                    <input
+                      value = {this.state.team_title}
+                      ref='team_title'
+                      data-id={this.props.teamlist.selected}
+                      type='text'
+                      onChange = {this.handleChange}
+                      className='form-control'
+                      placeholder='Название' />
+                  </div>
+                  <div className='col-sm-2'>
+                    <button onClick = {this.handleUpdateClick} className='btn btn-success'>
+                      <span className='glyphicon glyphicon-ok' aria-hidden='true' />
+                    </button>
+                    <button className='btn btn-primary'>
+                      <span className='glyphicon glyphicon-plus' aria-hidden='true' />
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
             )
     }
 }
-

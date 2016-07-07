@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import TeamList from '../../components/TeamList'
-import TeamList from '../../components/TeamList'
+import TeamForm from '../../components/TeamForm'
 import * as teamActions from '../../actions/TeamActions'
 
 export default class TeamPage extends Component {
@@ -15,7 +15,8 @@ export default class TeamPage extends Component {
         const loading = this.props.teampage.loading;
         const teamlist = this.props.teampage.teamlist;
 
-        var teamClick = this.props.teamActions.selectTeam
+        var teamClick = this.props.teamActions.selectTeam;
+        var updateTeam = this.props.teamActions.updateTeam;
 
         if (loading) {
             return (
@@ -25,7 +26,9 @@ export default class TeamPage extends Component {
             return (
                 <div>
                     <h4>Список команд</h4>
-                    <TeamForm />
+                    <TeamForm
+                      updateTeam = {updateTeam}
+                      teamlist={teamlist}/>
                     <TeamList
                     teamClick = {teamClick}
                     teamlist={teamlist}/>
