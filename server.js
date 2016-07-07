@@ -18,6 +18,15 @@ const app = express();
   app.use(express.static(__dirname + '/'));
 })();
 
+app.get('/api/teams', function(req, res){
+    console.log('get teams');
+    var teams =  [
+        {id: 1, title: 'Спартак'},
+        {id: 2, title: 'Динамо'},
+    ];
+    res.send(teams);
+});
+
 app.get(/.*/, function root(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
