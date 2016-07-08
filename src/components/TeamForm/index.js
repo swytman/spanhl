@@ -27,9 +27,25 @@ export default class TeamForm extends Component {
 
     handleUpdateClick = (e) => {
         e.preventDefault();
+        if (!this.props.teamlist.selected) {return}
         var input = this.refs.team_title;
         var team = {id: input.getAttribute('data-id'), title: input.value};
         this.props.updateTeam(team);
+    }
+
+    handleCreateClick = (e) => {
+        e.preventDefault();
+        var input = this.refs.team_title;
+        var team = {id: null, title: input.value};
+        this.props.updateTeam(team);
+    }
+
+    handleDestroyClick = (e) => {
+        e.preventDefault();
+        if (!this.props.teamlist.selected) {return}
+        var input = this.refs.team_title;
+        var team = {id: input.getAttribute('data-id')};
+        this.props.destroyTeam(team);
     }
 
     handleChange = (e) => {
@@ -37,7 +53,10 @@ export default class TeamForm extends Component {
     }
 
     render() {
-
+        var hidden;
+        if (!this.props.teamlist.selected){
+          hidden = 'hidden';
+        }
         return (
             <div>
               <form onSubmit={this.handleSubmit} className='form-horizontal' role='form'>
@@ -53,13 +72,20 @@ export default class TeamForm extends Component {
                       placeholder='Название' />
                   </div>
                   <div className='col-sm-2'>
-                    <button onClick = {this.handleUpdateClick} className='btn btn-success'>
-                      <span className='glyphicon glyphicon-ok' aria-hidden='true' />
+                    <button onClick = {this.handleUpdateClick} className={'btn btn-success '  + hidden}>
+                      <span className='glyphicon glyphicon-ok ' aria-hidden='true' />
                     </button>
+                    <button onClick = {this.handleDestroyClick} className={'btn btn-danger '  + hidden}>
+                      <span className='glyphicon glyphicon-trash' aria-hidden='true' />
+                    </button>
+                  </div>
+                  <div onClick = {this.handleCreateClick}  className='cols-sm-1'>
                     <button className='btn btn-primary'>
                       <span className='glyphicon glyphicon-plus' aria-hidden='true' />
                     </button>
                   </div>
+
+
                 </div>
               </form>
             </div>

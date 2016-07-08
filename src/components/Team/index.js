@@ -21,7 +21,7 @@ export default class Team extends Component {
             <div>
                 <div
                     className = {klass}
-                    onClick = {this.props.teamClick.bind(this, team.id)}>{team.id}. {team.title}
+                    onClick = {this.props.teamClick.bind(this, team.id)}>{this.props.index}. {team.title}
                 </div>
             </div>
         )

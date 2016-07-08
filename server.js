@@ -41,14 +41,25 @@ app.get('/api/teams', function(req, res){
 });
 
 app.post('/api/teams', function(req, res){
-    console.log(req.body);
-
     if (req.body.id){
-        var update = "UPDATE teams  SET title = '" + req.body.title + "' WHERE id = " + req.body.id;
-        console.log(update);
-        db.run(update);
+        var sql = "UPDATE teams  SET title = '" + req.body.title + "' WHERE id = " + req.body.id;
+        console.log(sql);
+        db.run(sql);
     } else {
        db.run("INSERT INTO teams (title) VALUES ('" + req.body.title + "')");
+    }
+
+    db.all("SELECT * FROM teams", (err, rows) => {
+        res.send(rows);
+    });
+});
+
+app.delete('/api/teams/:id', function(req, res){
+
+    if (req.params.id){
+        var sql = "DELETE FROM teams WHERE id = " + req.params.id;
+        console.log(sql);
+        db.run(sql);
     }
 
     db.all("SELECT * FROM teams", (err, rows) => {

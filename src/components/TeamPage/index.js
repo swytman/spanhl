@@ -7,34 +7,26 @@ import * as teamActions from '../../actions/TeamActions'
 
 export default class TeamPage extends Component {
     componentDidMount() {
-        this.props.teamActions.loadTeams(); // Вызываем загрузку
+      this.props.teamActions.loadTeams(); // Вызываем загрузку
     }
 
     render() {
 
-        const loading = this.props.teampage.loading;
         const teamlist = this.props.teampage.teamlist;
-
         var teamClick = this.props.teamActions.selectTeam;
         var updateTeam = this.props.teamActions.updateTeam;
-
-        var list;
-
-        if (loading) {
-            list = <div><p>Загрузка...</p></div>;
-        } else {
-            list = <TeamList
-            teamClick = {teamClick}
-            teamlist={teamlist}/>;
-        }
+        var destroyTeam = this.props.teamActions.destroyTeam;
 
         return (
             <div>
                 <h4>Список команд</h4>
                 <TeamForm
                   updateTeam = {updateTeam}
+                  destroyTeam = {destroyTeam}
                   teamlist={teamlist}/>
-                {list}
+                <TeamList
+                  teamClick = {teamClick}
+                  teamlist={teamlist}/>
             </div>
         )
     }

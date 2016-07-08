@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import {
     GET_TEAMS_REQUEST, GET_TEAMS_OK, GET_TEAMS_FAIL, SELECT_TEAM,
-//    TEAM_DESTROY_REQUEST, TEAM_DESTROY_OK,TEAM_DESTROY_FAIL,
+   TEAM_DESTROY_REQUEST, TEAM_DESTROY_OK,TEAM_DESTROY_FAIL,
     TEAM_UPDATE_REQUEST, TEAM_UPDATE_OK, TEAM_UPDATE_FAIL
 } from '../constants/Team'
 
@@ -40,6 +40,33 @@ export function updateTeam(team) {
         .catch(result => {
             dispatch({
                 type: TEAM_UPDATE_FAIL,
+                errors: result.statusText
+            })
+        })
+    }
+}
+
+export function destroyTeam(team) {
+    return dispatch => {
+
+        dispatch({
+            type: TEAM_DESTROY_REQUEST
+        });
+
+        request.delete(
+            '/api/teams/' + team.id,
+            team,
+            {headers: {'Accept': 'application/json'}}
+        )
+            .then(result => {
+            dispatch({
+                type: TEAM_DESTROY_OK,
+                data: result.data
+            })
+        })
+        .catch(result => {
+            dispatch({
+                type: TEAM_DESTROY_FAIL,
                 errors: result.statusText
             })
         })
