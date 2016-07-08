@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import NavLink from '../../components/NavLink'
 
+var EventEmitter = require('events').EventEmitter;
+
+window.ee = new EventEmitter();
+
 export default class App extends Component {
   render() {
     return (

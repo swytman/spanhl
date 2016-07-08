@@ -14,6 +14,7 @@ const defaultState = {
 }
 
 export default function teampage(state = defaultState, action) {
+
     switch (action.type) {
 
         case GET_TEAMS_REQUEST:
@@ -21,13 +22,21 @@ export default function teampage(state = defaultState, action) {
             return { ... state, loading: true };
 
         case GET_TEAMS_OK:
-        case TEAM_UPDATE_OK:
-            return { ... state,
+            return {
                 loading: false,
                 errors: null,
                 teamlist: {
                     teams: action.data,
-                    selected: null
+                    selected: state.teamlist.selected
+                }
+            };
+        case TEAM_UPDATE_OK:
+            return {
+                loading: false,
+                errors: null,
+                teamlist: {
+                    teams: action.data,
+                    selected: state.teamlist.selected
                 }
             };
 
@@ -44,6 +53,7 @@ export default function teampage(state = defaultState, action) {
             };
 
         default:
+
             return state;
     }
 }

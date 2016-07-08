@@ -13,6 +13,8 @@ export function selectTeam(id){
           type: 'SELECT_TEAM',
           id: id
         });
+
+        window.ee.emit('TeamPage.SELECT_TEAM', id)
     }
 }
 
@@ -21,7 +23,7 @@ export function updateTeam(team) {
     return dispatch => {
 
         dispatch({
-            type: 'TEAM_UPDATE_REQUEST'
+            type: TEAM_UPDATE_REQUEST
         });
 
         request.post(
@@ -31,13 +33,13 @@ export function updateTeam(team) {
         )
             .then(result => {
             dispatch({
-                type: 'UPDATE_TEAMS_OK',
+                type: TEAM_UPDATE_OK,
                 data: result.data
             })
         })
         .catch(result => {
             dispatch({
-                type: 'UPDATE_TEAMS_FAIL',
+                type: TEAM_UPDATE_FAIL,
                 errors: result.statusText
             })
         })

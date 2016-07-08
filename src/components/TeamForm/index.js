@@ -6,13 +6,27 @@ export default class TeamForm extends Component {
     constructor(props) {
       super(props);
       this.state = {team_title: '' }
+
+      var self = this;
+
+      window.ee.addListener('TeamPage.SELECT_TEAM', (id) =>  {
+        var value = self.props.teamlist.teams.filter((team) => team.id === id);
+        if (value.length == 1) {value = value[0].title } else {value = ''}
+        if (value){
+           self.setState({team_title: value });
+        } else {
+           self.setState({team_title: '' });
+        }
+      });
+
     }
 
     handleSubmit = (e) => {
       e.preventDefault();
     }
 
-    handleUpdateClick = () => {
+    handleUpdateClick = (e) => {
+        e.preventDefault();
         var input = this.refs.team_title;
         var team = {id: input.getAttribute('data-id'), title: input.value};
         this.props.updateTeam(team);
@@ -23,13 +37,6 @@ export default class TeamForm extends Component {
     }
 
     render() {
-        var value = this.props.teamlist.teams.filter((team) => team.id === this.props.teamlist.selected);
-        if (value.length == 1) {value = value[0].title } else {value = ''}
-        if (value){
-          // this.state = {team_title: value }
-        } else {
-          // this.state = {team_title: '' }
-        }
 
         return (
             <div>

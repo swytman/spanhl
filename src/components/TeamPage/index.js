@@ -18,24 +18,28 @@ export default class TeamPage extends Component {
         var teamClick = this.props.teamActions.selectTeam;
         var updateTeam = this.props.teamActions.updateTeam;
 
+        var list;
+
         if (loading) {
-            return (
-                <div><p>Загрузка...</p></div>
-            )
+            list = <div><p>Загрузка...</p></div>;
         } else {
-            return (
-                <div>
-                    <h4>Список команд</h4>
-                    <TeamForm
-                      updateTeam = {updateTeam}
-                      teamlist={teamlist}/>
-                    <TeamList
-                    teamClick = {teamClick}
-                    teamlist={teamlist}/>
-                </div>
-            )
+            list = <TeamList
+            teamClick = {teamClick}
+            teamlist={teamlist}/>;
         }
+
+        return (
+            <div>
+                <h4>Список команд</h4>
+                <TeamForm
+                  updateTeam = {updateTeam}
+                  teamlist={teamlist}/>
+                {list}
+            </div>
+        )
     }
+
+
 }
 
 
