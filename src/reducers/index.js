@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
-//import user from './user'
 import teampage from './teampage'
+import games from './games'
 
 export const rootReducer = combineReducers({
-   teampage
+   teampage,
+   games
 })

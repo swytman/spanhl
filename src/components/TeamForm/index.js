@@ -35,9 +35,10 @@ export default class TeamForm extends Component {
 
     handleCreateClick = (e) => {
         e.preventDefault();
-        var input = this.refs.team_title;
-        var team = {id: null, title: input.value};
-        this.props.updateTeam(team);
+        var team = {id: null, title: 'Новая команда'};
+        this.props.createTeam(team);
+        this.setState({team_title: 'Новая команда'});
+        this.refs.team_title.focus();
     }
 
     handleDestroyClick = (e) => {

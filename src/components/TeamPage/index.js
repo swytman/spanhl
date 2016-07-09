@@ -15,6 +15,7 @@ export default class TeamPage extends Component {
         const teamlist = this.props.teampage.teamlist;
         var teamClick = this.props.teamActions.selectTeam;
         var updateTeam = this.props.teamActions.updateTeam;
+        var createTeam = this.props.teamActions.createTeam;
         var destroyTeam = this.props.teamActions.destroyTeam;
 
         return (
@@ -23,6 +24,7 @@ export default class TeamPage extends Component {
                 <TeamForm
                   updateTeam = {updateTeam}
                   destroyTeam = {destroyTeam}
+                  createTeam = {createTeam}
                   teamlist={teamlist}/>
                 <TeamList
                   teamClick = {teamClick}

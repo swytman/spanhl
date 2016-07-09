@@ -1,0 +1,1 @@
+export const GET_GAMES_REQUEST = 'GET_GAMES_REQUEST'

@@ -4,7 +4,7 @@
   "description": "React-router RU tutorial",
   "main": "index.js",
   "scripts": {
-    "start": "node bin/server.js"
+    "start": "nodemon bin/server.js"
   },
   "author": "Maxim Patsianskiy",
   "license": "MIT",
@@ -48,6 +48,7 @@
     "body-parser": "^1.15.2",
     "jquery": "^2.2.1",
     "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.4",
