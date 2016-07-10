@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import * as gamesActions from '../../actions/GamesActions'
+import Game from '../Game'
 
 export default class Games extends Component {
 
@@ -11,16 +12,25 @@ export default class Games extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h4>Список игр</h4>
-        <Link to='/games/new'>Создать</Link>
-        {this.props.children}
-      </div>
-
-    )
+    if (!this.props.params || !this.props.params.game_id) {
+      return (
+        <div>
+          <h4>Список игр</h4>
+          <Link to='/games/new'>Создать</Link>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <Link to='/games'>К списку игр</Link>
+          <Game
+            id={this.props.params.game_id}
+            getGame={this.props.gamesActions.getGame()}
+          />
+        </div>
+      )
+    }
   }
-
 
 }
 
