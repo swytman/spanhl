@@ -72,9 +72,19 @@ export default class GameDB  {
     this.db.run(sql);
   }
 
+  get(id, callback){
+    console.log('Get game ' + id);
+    this.db.all("SELECT * from games WHERE id = " + id, (err, rows) => {
+        callback(rows);
+    });
+  }
+
   create(game){
     console.log('Create game ' + game.title);
-    var sql = "INSERT INTO games (title) VALUES ('" + game.title + "')"
+    let keys = Object.keys(game.data).join(', ');
+    let values = Object.values(game.data).map(v => "'"+v+"'").join(', ');
+    var sql = `INSERT INTO games (${keys}) VALUES (${values})`
+    console.log(sql);
     this.db.run(sql);
   }
 

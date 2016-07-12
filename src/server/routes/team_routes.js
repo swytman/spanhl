@@ -29,7 +29,6 @@ module.exports = function(app, db){
   app.delete('/api/teams/:id', function(req, res){
     if (req.params.id){
       teamdb.delete(req.params.id);
-      db.run(sql);
     }
     teamdb.list((rows) => {res.send(rows)});
   });

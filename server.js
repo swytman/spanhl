@@ -5,6 +5,8 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 var db = new sqlite3.Database('./data/mydb.db');
 
+
+
 app.use( bodyParser.json() );
 
 app.use(bodyParser.urlencoded({
@@ -28,7 +30,10 @@ app.use(bodyParser.urlencoded({
 })();
 
 require('./src/server/routes/team_routes')(app, db);
-require('./src/server/routes/game_routes')(app, db);
+
+var gamesRouter = express.Router({mergeParams: true});
+require('./src/server/routes/game_routes')(gamesRouter, db);
+app.use('/api/games', gamesRouter)
 
 app.get(/.*/, function root(req, res) {
   res.sendFile(__dirname + '/index.html');

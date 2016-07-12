@@ -4,7 +4,7 @@ import games from './games'
 import game from './game'
 
 export const rootReducer = combineReducers({
+   game,
    teampage,
-   games,
-   game
+   games
 })
