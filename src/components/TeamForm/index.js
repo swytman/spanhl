@@ -80,8 +80,8 @@ export default class TeamForm extends Component {
                       <span className='glyphicon glyphicon-trash' aria-hidden='true' />
                     </button>
                   </div>
-                  <div onClick = {this.handleCreateClick}  className='cols-sm-1'>
-                    <button className='btn btn-primary'>
+                  <div className='cols-sm-1'>
+                    <button onClick = {this.handleCreateClick}  className='btn btn-primary'>
                       <span className='glyphicon glyphicon-plus' aria-hidden='true' />
                     </button>
                   </div>

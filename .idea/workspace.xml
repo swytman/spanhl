@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874951b1-c0a6-46aa-af59-6a0ec92c18a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constants/Routing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/constants/User.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/middlewares/redirect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reducers/user.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/constants/Team.js" afterPath="$PROJECT_DIR$/src/constants/Team.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/TeamActions.js" afterPath="$PROJECT_DIR$/src/actions/TeamActions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/configureStore.js" afterPath="$PROJECT_DIR$/src/store/configureStore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/game.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Game/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Games/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/mydb.db" afterPath="$PROJECT_DIR$/data/mydb.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/routes/game_routes.js" afterPath="$PROJECT_DIR$/src/server/routes/game_routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Game/index.js" afterPath="$PROJECT_DIR$/src/components/Game/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Games/index.js" afterPath="$PROJECT_DIR$/src/components/Games/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TeamForm/index.js" afterPath="$PROJECT_DIR$/src/components/TeamForm/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TeamPage/index.js" afterPath="$PROJECT_DIR$/src/components/TeamPage/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App/index.js" afterPath="$PROJECT_DIR$/src/containers/App/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/index.js" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/teampage.js" afterPath="$PROJECT_DIR$/src/reducers/teampage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/spanhl.iml" afterPath="$PROJECT_DIR$/.idea/spanhl.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spanhl.iws" />
@@ -40,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Games/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="5" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1110">
+            <state line="14" column="4" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="825">
               <folding />
             </state>
           </provider>
@@ -52,86 +49,79 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TeamForm/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="14" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1110">
+            <state line="1" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/TeamList/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Game/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="18" selection-start="625" selection-end="625" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="480">
-              <folding>
-                <marker date="1467965402000" expanded="true" signature="282:608" placeholder="&lt;xml/&gt;" />
-                <marker date="1467965402000" expanded="true" signature="332:404" placeholder="&lt;xml/&gt;" />
-                <marker date="1467965402000" expanded="true" signature="333:404" placeholder="{...}" />
-              </folding>
+            <state line="25" column="0" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="750">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/TeamPage/index.js">
+      <file leaf-file-name="form.jsx" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Game/form.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="35" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="960">
-              <folding>
-                <marker date="1467998913000" expanded="true" signature="326:1136" placeholder="{...}" />
-                <marker date="1467998913000" expanded="true" signature="439:1132" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configureStore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/configureStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="43" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="17" column="10" selection-start="747" selection-end="747" vertical-scroll-proportion="0.50898206" vertical-offset="0" max-vertical-offset="2640">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+        <entry file="file://$PROJECT_DIR$/src/server/teamdb/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TeamActions.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/TeamActions.js">
+      <file leaf-file-name="styles.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Games/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="39" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1215">
+            <state line="10" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teampage.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/reducers/teampage.js">
+      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="31" selection-start="919" selection-end="919" vertical-scroll-proportion="0.68662673" vertical-offset="166" max-vertical-offset="975">
+            <state line="12" column="26" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/App/index.js">
+        <entry file="file://$PROJECT_DIR$/src/server/gamedb/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+            <state line="29" column="19" selection-start="766" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Team.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constants/Team.js">
+      <file leaf-file-name="games.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/games.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="29" selection-start="471" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+            <state line="18" column="31" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game_routes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/routes/game_routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="28" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -156,7 +146,6 @@
         <option value="$PROJECT_DIR$/App.jsx" />
         <option value="$PROJECT_DIR$/src/components/Team/styles.scss" />
         <option value="$PROJECT_DIR$/src/reducers/team.js" />
-        <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/TeamList/index.js" />
         <option value="$PROJECT_DIR$/src/components/Team/index.js" />
         <option value="$PROJECT_DIR$/src/containers/App/index.js" />
@@ -164,17 +153,27 @@
         <option value="$PROJECT_DIR$/src/actions/TeamActions.js" />
         <option value="$PROJECT_DIR$/src/middlewares/redirect.js" />
         <option value="$PROJECT_DIR$/src/store/configureStore.js" />
-        <option value="$PROJECT_DIR$/src/components/TeamForm/index.js" />
         <option value="$PROJECT_DIR$/src/components/TeamPage/index.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/reducers/teampage.js" />
+        <option value="$PROJECT_DIR$/src/components/Game/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/Games/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/Games/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/GameActions.js" />
+        <option value="$PROJECT_DIR$/src/server/routes/game_routes.js" />
+        <option value="$PROJECT_DIR$/src/reducers/game.js" />
+        <option value="$PROJECT_DIR$/src/components/TeamForm/form.js" />
+        <option value="$PROJECT_DIR$/src/components/TeamForm/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Game/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Game/form.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="367" />
-    <option name="y" value="466" />
+    <option name="x" value="623" />
+    <option name="y" value="201" />
     <option name="width" value="1620" />
     <option name="height" value="889" />
   </component>
@@ -267,7 +266,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reducers" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teamdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -285,7 +288,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="containers" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spanhl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spanhl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gamedb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,32 +329,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamPage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spanhl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spanhl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TeamList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,6 +371,10 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -388,7 +391,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Game" />
+      <recent name="$PROJECT_DIR$/src/components/Games" />
       <recent name="$PROJECT_DIR$/src/components/Team" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Game" />
     </key>
   </component>
   <component name="RunManager">
@@ -504,13 +512,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="367" y="466" width="1620" height="889" extended-state="0" />
-    <editor active="false" />
+    <frame x="623" y="201" width="1620" height="889" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928312" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928312" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27946767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2243346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -571,21 +579,14 @@
     <entry file="file://$PROJECT_DIR$/src/components/TeamList/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="33" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="480">
-          <folding>
-            <marker date="1467965402000" expanded="true" signature="282:608" placeholder="&lt;xml/&gt;" />
-            <marker date="1467965402000" expanded="true" signature="332:404" placeholder="&lt;xml/&gt;" />
-            <marker date="1467965402000" expanded="true" signature="333:404" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TeamPage/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="900">
-          <folding>
-            <marker date="1467998913000" expanded="true" signature="326:1136" placeholder="{...}" />
-            <marker date="1467998913000" expanded="true" signature="439:1132" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +600,11 @@
     <entry file="file://$PROJECT_DIR$/src/actions/TeamActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="11" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1185">
-          <folding />
+          <folding>
+            <marker date="1468223995000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1468223995000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1468223995000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,7 +636,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270" />
+        <state line="12" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -641,7 +648,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -651,12 +660,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270" />
+        <state line="12" column="0" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -669,31 +682,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="772" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Genre/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/List/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Release/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/LoginPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="270" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NavLink/styles.scss">
@@ -711,13 +702,6 @@
         <state line="5" column="13" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/UserActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Team/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
@@ -725,37 +709,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Team/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="0" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/App/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/TeamActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="972" selection-end="972" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="1215">
-          <folding />
+        <state line="96" column="39" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0" vertical-offset="1119" max-vertical-offset="2040">
+          <folding>
+            <marker date="1468223995000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1468223995000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1468223995000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/Team.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="471" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+        <state line="15" column="29" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
@@ -767,44 +734,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TeamList/index.js">
+    <entry file="file://$PROJECT_DIR$/src/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="625" selection-end="625" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="480">
-          <folding>
-            <marker date="1467965402000" expanded="true" signature="282:608" placeholder="&lt;xml/&gt;" />
-            <marker date="1467965402000" expanded="true" signature="332:404" placeholder="&lt;xml/&gt;" />
-            <marker date="1467965402000" expanded="true" signature="333:404" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TeamForm/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="14" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="1110">
+        <state line="15" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TeamPage/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Team/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="960">
-          <folding>
-            <marker date="1467998913000" expanded="true" signature="326:1136" placeholder="{...}" />
-            <marker date="1467998913000" expanded="true" signature="439:1132" placeholder="{...}" />
-          </folding>
+        <state line="1" column="0" selection-start="41" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Game/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="5" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1110">
+        <state line="9" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/App/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="77" selection-start="366" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/teampage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="919" selection-end="919" vertical-scroll-proportion="0.68662673" vertical-offset="166" max-vertical-offset="975">
+        <state line="26" column="26" selection-start="727" selection-end="727" vertical-scroll-proportion="0.5968064" vertical-offset="91" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/GamesActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="25" selection-start="0" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="11" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/GameActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="14" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/games.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="31" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0" vertical-offset="99" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/routes/game_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="28" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Games/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TeamList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="61" selection-start="384" selection-end="384" vertical-scroll-proportion="0.38922155" vertical-offset="0" max-vertical-offset="501">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TeamPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.6706587" vertical-offset="99" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Games/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/teamdb/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/gamedb/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="766" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TeamForm/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Game/form.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="10" selection-start="747" selection-end="747" vertical-scroll-proportion="0.50898206" vertical-offset="0" max-vertical-offset="2640">
           <folding />
         </state>
       </provider>

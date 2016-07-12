@@ -1,9 +1,11 @@
 import GameDB from '../gamedb'
+import TeamDB from '../teamdb'
 
 
 module.exports = function(app, db){
 
   var gamedb = new GameDB(db);
+  var teamdb = new TeamDB(db);
   // list games
   app.get('/api/games', function(req, res){
       console.log('list games request');
@@ -31,6 +33,12 @@ module.exports = function(app, db){
     console.log('get game request');
 
   })
+
+    // new game
+    app.get('/api/game/new', function(req, res){
+        console.log('new game request');
+        teamdb.list((rows) => {res.send({teams:rows})});
+    })
 
   // delete game
   app.delete('/api/games/:id', function(req, res){
