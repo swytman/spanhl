@@ -10,10 +10,15 @@ import './styles.scss'
 export default class Game extends Component {
 
   componentWillReceiveProps(nextProps) {
-    this.fillForm(nextProps.payload.game);
 
     if (nextProps.params.game_id != this.props.params.game_id) {
-      this.props.gameActions.getGame(this.props.params.game_id);
+      this.props.gameActions.getGame(nextProps.params.game_id);
+    }
+  }
+
+  componentDidUpdate(prevProps){
+    if (JSON.stringify(prevProps.payload.game) !== JSON.stringify(this.props.payload.game)){
+        this.fillForm(this.props.payload.game);
     }
   }
 

@@ -5,6 +5,7 @@ import {
 
 const defaultState = {
     loading: true,
+    errors: null,
     game: null,
     teams: []
 }
@@ -15,16 +16,17 @@ export default function game(state = defaultState, action) {
 
         case GET_GAME_REQUEST:
         case GAME_CREATE_REQUEST:
-            return { loading: true, game: null, teams: [] };
+            return {...state, loading: true, errors: null };
 
         case GET_GAME_OK:
-            return { teams:  action.data.teams, game:  action.data.rows[0], loading: false }
+            return { teams:  action.data.teams, game:  action.data.rows[0], loading: false, errors: null }
 
         case GAME_CREATE_OK:
           return {
               loading: false,
               teams:  action.data.teams,
-              game:  action.data.game
+              game:  action.data.game,
+              errors: null
           };
 
         case GET_GAME_FAIL:
