@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import TeamList from '../../components/TeamList'
 import TeamForm from '../../components/TeamForm'
 import * as teamActions from '../../actions/TeamActions'
+import './styles.scss'
 
 export default class TeamPage extends Component {
     componentDidMount() {
@@ -20,15 +21,19 @@ export default class TeamPage extends Component {
 
         return (
             <div>
-                <h4>Список команд</h4>
-                <TeamForm
-                  updateTeam = {updateTeam}
-                  destroyTeam = {destroyTeam}
-                  createTeam = {createTeam}
-                  teamlist={teamlist}/>
-                <TeamList
-                  teamClick = {teamClick}
-                  teamlist={teamlist}/>
+                <div className='row'>
+                    <div className='teams col-sm-12'>
+                        <span className='teams-title'>Список команд</span>
+                        <TeamForm
+                          updateTeam = {updateTeam}
+                          destroyTeam = {destroyTeam}
+                          createTeam = {createTeam}
+                          teamlist={teamlist}/>
+                        <TeamList
+                          teamClick = {teamClick}
+                          teamlist={teamlist}/>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -4,10 +4,16 @@ import { connect } from 'react-redux'
 var serialize = require('form-serialize');
 import * as gameActions from '../../actions/GameActions'
 import GameForm from '../GameForm'
+import $ from 'jquery'
+
 import './styles.scss'
 
 
 export default class Game extends Component {
+
+  componentDidMount(){
+    this.props.gameActions.getGame(this.props.params.game_id);
+  }
 
   componentWillReceiveProps(nextProps) {
 
@@ -17,13 +23,38 @@ export default class Game extends Component {
   }
 
   componentDidUpdate(prevProps){
-    if (JSON.stringify(prevProps.payload.game) !== JSON.stringify(this.props.payload.game)){
+
+    if (!prevProps.payload.game || prevProps.payload.game.id !== this.props.payload.game.id){
+
         this.fillForm(this.props.payload.game);
     }
   }
 
-  fillForm (game) {
-    console.log(game);
+  fillForm (data){
+
+        $(this.refs.game_form).find('input').each( function(){
+            if ($(this).is(':checkbox')) {
+                $(this).prop('checked', 0);
+            } else {
+                $(this).val('');
+            }
+        });
+        $(this.refs.game_form).find('select').val(0);
+
+        if (data) {
+            for (let [k,v] of Object.entries(data)) {
+                let input = $('[name*='+k+']');
+                if (input.length > 0) {
+                    if (input.is(':checkbox')) {
+                        input.prop('checked', v);
+
+                    } else {
+                        input.val(v);
+                    }
+            }
+        }
+
+    }
   }
 
   handleSaveClick = (e) => {
@@ -37,9 +68,17 @@ export default class Game extends Component {
       if (this.props.params.game_id === 'new'){
         this.props.gameActions.createGame(data)
       } else {
-          console.log('update');
+        this.props.gameActions.updateGame({...data, id: this.props.params.game_id})
       }
 
+
+  }
+
+  handleDestroyClick = (e) => {
+    e.preventDefault();
+    if (confirm('Удалить игру?')){
+        this.props.gameActions.destroyGame(this.props.params.game_id);
+    }
 
   }
 
@@ -51,29 +90,43 @@ export default class Game extends Component {
     return (
       <div>
         <form ref='game_form' className='form-horizontal' role='form'>
-          <div className='games-item_home col-sm-5'>
-              <legend>Хозяева</legend>
-              <GameForm
-                teams={this.props.payload.teams}
-                submitAction={submitAction}
-                prefix='home'
-              />
-          </div>
+          <div className='row'>
+              <div className='game-team col-sm-5'>
+                  <legend>Хозяева</legend>
+                  <div className='game-team_form'>
+                      <GameForm
+                        ref='home_form'
+                        teams={this.props.payload.teams}
+                        submitAction={submitAction}
+                        prefix='home'
+                        className='game-team_form'
+                      />
+                  </div>
+              </div>
 
-          <div className='games-item_guest col-sm-5'>
-              <legend>Гости</legend>
-              <GameForm
-                teams={this.props.payload.teams}
-                submitAction={submitAction}
-                prefix='guest'
-              />
-          </div>
-          <div className='col-sm-12'>
-            <div className='cols-sm-1'>
-              <button onClick = {this.handleSaveClick}  className='btn btn-primary'>
-                Сохранить
-              </button>
-            </div>
+              <div className='game-team col-sm-5'>
+                  <legend>Гости</legend>
+                  <div className='game-team_form'>
+                      <GameForm
+                        ref='guest_form'
+                        teams={this.props.payload.teams}
+                        submitAction={submitAction}
+                        prefix='guest'
+                      />
+                  </div>
+              </div>
+              <br />
+                <div className='col-sm-5 col-xs-5'>
+                  <button onClick = {this.handleSaveClick}  className='btn btn-primary'>
+                    Сохранить
+                  </button>
+                </div>
+
+                <div className='col-sm-5 col-xs-5'>
+                  <button onClick = {this.handleDestroyClick}  className='pull-right btn btn-danger'>
+                    Удалить
+                  </button>
+                </div>
           </div>
         </form>
       </div>

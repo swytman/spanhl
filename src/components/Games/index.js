@@ -23,22 +23,22 @@ export default class Games extends Component {
       <div className='row'>
         <div className='games-list col-sm-4'>
             <span className='games-list_title'>Список игр</span>
-            <Link to='/games/new'>
-                <button className='btn btn-xs btn-primary'>
-                    <span className='glyphicon glyphicon-plus' aria-hidden='true' />
-                </button>
-            </Link>
-            <div className='game-list_list'>
-                {this.props.payload.games.map(function(game) {
-                return <GameListItem
-                    key = {game.id}
-                    game={game}
-                />;
-            } ) }
-            </div>
 
+            <div className='games-list_list'>
+                <Link to='/games/new'>
+                    Новая игра
+                </Link>
+                <hr />
+                {this.props.payload.games.map(function(game) {
+                    return <GameListItem
+                        key = {game.id}
+                        game={game}
+                        />;
+                    })
+                }
+            </div>
         </div>
-        <div className='col-sm-8'>
+        <div className='game col-sm-8'>
           {this.props.children}
         </div>
       </div>

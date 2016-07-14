@@ -21,16 +21,15 @@ module.exports = function(gamesRouter, db){
     .patch(function(req, res){
       console.log('update game request');
       if (req.body.id){
-          gamedb.update(req.body);
+          gamedb.update(req.params.id, req.body.data);
       }
       gamedb.list((rows) => {res.send(rows)});
     })
     .delete(function(req, res){
       if (req.params.id){
-        gamedb.delete(req.params.id);
-        db.run(sql);
+        gamedb.destroy(req.params.id);
       }
-      gamedb.list((rows) => {res.send(rows)});
+      res.send({result: 'OK'});
     });
 
 
@@ -40,9 +39,11 @@ module.exports = function(gamesRouter, db){
       gamedb.list( (rows) => {res.send(rows)} );
     })
     .post(function(req, res){
-      console.log('create game request');
-      console.log(gamedb.create(req.body));
-      teamdb.list((rows) => {res.send({teams:rows})});
+        console.log('create game request');
+        var id = gamedb.create(req.body, (id) => {
+            console.log(id);
+          res.send({id: id})
+        });
     });
 
 }

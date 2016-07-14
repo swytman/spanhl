@@ -8,7 +8,10 @@ export default class GameForm extends Component {
           <div className='form-group'>
               <label className='col-sm-12' htmlFor='title'>Команда</label>
               <div className='col-sm-12'>
-                  <select name={`data[${prefix}_id]`} className='form-control' defaultValue=''required>
+                  <select
+                    name={`data[${prefix}_id]`}
+                    className='form-control'
+                    defaultValue=''required>
                       <option value='' disabled>Команда</option>
                         {this.props.teams.map(function(team) {
                             return <option key={team.id}

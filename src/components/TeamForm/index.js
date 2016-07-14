@@ -44,9 +44,11 @@ export default class TeamForm extends Component {
     handleDestroyClick = (e) => {
         e.preventDefault();
         if (!this.props.teamlist.selected) {return}
-        var input = this.refs.team_title;
-        var team = {id: input.getAttribute('data-id')};
-        this.props.destroyTeam(team);
+        if (confirm('Удалить игру?')){
+            var input = this.refs.team_title;
+            var team = {id: input.getAttribute('data-id')};
+            this.props.destroyTeam(team);
+        }
     }
 
     handleChange = (e) => {
@@ -60,9 +62,9 @@ export default class TeamForm extends Component {
         }
         return (
             <div>
-              <form onSubmit={this.handleSubmit} className='form-horizontal' role='form'>
+              <form onSubmit={this.handleSubmit} className='teams-form form-horizontal' role='form'>
                 <div className='form-group'>
-                  <div className='col-sm-4'>
+                  <div className='col-sm-4 col-xs-5'>
                     <input
                       value = {this.state.team_title}
                       ref='team_title'
@@ -72,7 +74,7 @@ export default class TeamForm extends Component {
                       className='form-control'
                       placeholder='Название' />
                   </div>
-                  <div className='col-sm-2'>
+                  <div className='col-sm-2 col-xs-4'>
                     <button onClick = {this.handleUpdateClick} className={'btn btn-success '  + hidden}>
                       <span className='glyphicon glyphicon-ok ' aria-hidden='true' />
                     </button>
@@ -80,9 +82,9 @@ export default class TeamForm extends Component {
                       <span className='glyphicon glyphicon-trash' aria-hidden='true' />
                     </button>
                   </div>
-                  <div className='cols-sm-1'>
+                  <div className='cols-sm-2 col-xs-3'>
                     <button onClick = {this.handleCreateClick}  className='btn btn-primary'>
-                      <span className='glyphicon glyphicon-plus' aria-hidden='true' />
+                      Новая
                     </button>
                   </div>
 

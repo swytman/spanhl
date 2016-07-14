@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+import NavLink from '../../components/NavLink'
 
 
 export default class GameListItem extends Component {
@@ -7,9 +7,9 @@ export default class GameListItem extends Component {
         var game = this.props.game;
         return (
             <div>
-                <Link to={`/games/${game.id}`}>
-                    {game.guest_id} - {game.home_id}
-                </Link>
+                <NavLink to={`/games/${game.id}`}>
+                    {game.home} - {game.guest}
+                </NavLink>
             </div>
         )
     }

@@ -9,18 +9,19 @@ export default class TeamList extends Component {
         var selected = this.props.teamlist.selected
         var index = 1;
         return (
+            <div>
+                <div className='teams-list row'>
+                  {this.props.teamlist.teams.map(function(team) {
+                      return <Team
+                          key={team.id}
+                          team={team}
+                          index = {index++}
+                          selected = {team.id === selected}
+                          teamClick={teamClick}
 
-            <div className='row'>
-              {this.props.teamlist.teams.map(function(team) {
-                  return <Team
-                      key={team.id}
-                      team={team}
-                      index = {index++}
-                      selected = {team.id === selected}
-                      teamClick={teamClick}
-
-                  />;
-              } ) }
+                      />;
+                  } ) }
+                </div>
             </div>
         )
     }
